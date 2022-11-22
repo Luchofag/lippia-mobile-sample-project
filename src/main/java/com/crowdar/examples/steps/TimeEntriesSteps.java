@@ -9,8 +9,8 @@ import io.cucumber.java.en.And;
 
 public class TimeEntriesSteps extends PageSteps {
 
-    @And("el usuario agrega un time entry con los siguientes datos (.*), (.*)")
-    public void addTime(int hour,String minute) {
+    @And("el usuario agrega un time entry con los siguientes datos {int}, y {int}")
+    public void addTime(int hour, int minute) {
         TimeEntriesService.isViewLoaded();
         TimeEntriesService.addHour(hour);
         TimeEntriesService.addMinute(minute);
@@ -22,4 +22,8 @@ public class TimeEntriesSteps extends PageSteps {
     }
 
 
+    @And("el usuario agrega un time entry con la fecha el 22 de diciembre")
+    public void elUsuarioAgregaUnTimeEntryConLaFechaEnElDiaDelMesDeDiciembreDel() {
+        TimeEntriesService.addDate();
+    }
 }

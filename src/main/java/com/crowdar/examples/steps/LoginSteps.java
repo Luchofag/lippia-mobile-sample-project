@@ -16,7 +16,7 @@ public class LoginSteps extends PageSteps {
         LoginService.isViewLoaded();
     }
 
-    @When("The user logs in the application with: (.*), (.*)")
+    @When("El usuario se logea en la aplicacion con (.*), (.*)")
     public void doLoginProcess(String email, String password) {
         LoginService.doLogin(email, password);
     }
